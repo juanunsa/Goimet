@@ -1,0 +1,260 @@
+/* GOIMET - Estilos Profesionales Científicos (Fondo Claro & Colores Oficiales) */
+:root {
+  --primary-color: #0066B2;       /* Azul Institucional Orán/UNSa */
+  --secondary-color: #00853D;     /* Verde Oranense */
+  --dark-green: #1B4332;          /* Verde Oscuro Académico */
+  --accent-gold: #DAA520;         /* Dorado Sol */
+  --bg-light: #F8FAF8;            /* Fondo Claro Limpio */
+  --bg-card: #FFFFFF;             /* Blanco Carta */
+  --text-dark: #1E293B;           /* Texto Oscuro para Alta Legibilidad */
+  --text-muted: #64748B;         /* Texto Secundario */
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabecera Principal */
+.header-container {
+  background-color: var(--bg-card);
+  border-bottom: 3px solid var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.top-banner {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  background: #004D80;
+}
+
+.top-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay-text {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background: rgba(0, 51, 102, 0.75);
+  padding: 7px 16px;
+  border-radius: 4px;
+  border-left: 4px solid var(--accent-gold);
+  backdrop-filter: blur(4px);
+}
+
+.header-title-bar {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--dark-green);
+  color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.brand-info h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--dark-green);
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.brand-info p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.location-badge {
+  font-size: 0.82rem;
+  color: var(--dark-green);
+  background: #E8F5E9;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  border: 1px solid #C8E6C9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Barra de Navegación */
+.navbar {
+  background-color: var(--dark-green);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+
+.nav-item {
+  white-space: nowrap;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 22px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: var(--secondary-color);
+  border-bottom-color: var(--accent-gold);
+  color: #FFFFFF;
+}
+
+/* Layout del Frame / Contenido */
+.main-wrapper {
+  max-width: 1260px;
+  width: 100%;
+  margin: 25px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.content-frame-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-header-bar {
+  background-color: #F1F5F9;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+}
+
+.frame-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #CBD5E1;
+}
+
+.content-iframe {
+  width: 100%;
+  height: 740px;
+  border: none;
+  background: var(--bg-card);
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #0F172A;
+  color: #94A3B8;
+  padding: 28px 20px;
+  margin-top: auto;
+  border-top: 4px solid var(--secondary-color);
+}
+
+.footer-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.footer-brand {
+  color: #F8FAFC;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-title-bar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-link {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+  .content-iframe {
+    height: 850px;
+  }
+}
